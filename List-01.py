@@ -238,3 +238,49 @@ for i in m:
                 
 print("Maximum value= ",mx_value)
             
+
+#  Wap to remove the duplicate value from list without using predefined & find the count of differennt value present in list
+
+# m=[10,2,1,0,1,0,1,0,1,4,2,0,1,0,1,0,10,1,0,10]
+# r=[]
+
+# for i in m:
+#     if i not in r:
+#         r.append(i)
+        
+# print(r)
+# print("number of different value in list=",len(r)) # c=0 and c=c+1 wala se bhi ho sakta h 
+
+# WAP to find the maximum no of repetition and its elements
+my=[10,2,1,0,1,0,1,0,1,4,2,0,1,0,1,0,10,1,0,10,10,10,10,10,10,10,10,10,0,0,0,0,0,0,]
+e=0
+m=0
+# print(set(m))
+for i in set(my):
+    c=my.count(i)
+    if c>m:
+        m=c
+        e=i
+print("Maximum repetition=",m)
+print("elements",e)
+        
+    
+
+#  List compreshension :-
+#  it is easy and compact of creating list object from any iterable object
+#  list_name=[expression for lv EDT]
+
+# abc=[]
+# for i in range(1,101):
+#     v=i**2
+#     abc.append(v)
+# print(abc)
+
+# m=[a**2 for a in range(1,101)]
+# print(m)
+
+# m1=[i for i in range(1,101) if i%2==0]
+# print(m1)
+
+        
+    
