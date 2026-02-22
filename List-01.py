@@ -78,4 +78,163 @@ print("index no=",m.index("coding"))
 m[2]=[100,200,300]
 print(m)
 
+ M=[10,20,30,40,50]
+# # for i in M:
+# #     print(i)
+    
+# # how to access the data from list by using the while
 
+# lg=len(M)
+# i=0
+# while i<lg:
+#     print(M[i])
+#     i=i+1
+    
+# How man way we can delete the data from list
+# 1. pop()
+# 2.remove()
+# 3.clear()
+# 4.del    
+ 
+ # 1. pop() 
+#  -> it remove data by default from last 
+#  -> this method is used for delete the data from list by indexing 
+#syntax :-
+# m.pop(index_number)
+
+# it will delete one data at a time
+#  it will return the delete data 
+
+
+# m=[10,20,30,40,50]
+# v=m.pop() 
+# print(m)
+# print(m.pop()) # remove kiya hua data dikhata h
+# print(v)
+
+
+# m=[
+# m.pop(1) # remove by using index
+# print(m)
+
+
+
+# 2.remove()
+# this method is used for delete the data from list
+# it will delete specific data from list based on value
+# ye return value nhi deta 
+# ye do value ko nhi delete krta h : it can delete one data at a time
+
+# m=["mohan","sohan","rohan","chaman"]
+# m.remove("rohan")
+# print(m)
+
+# abc=[100,200,300,400,500]
+# abc.remove(300)
+# print(abc)
+
+# syntax:
+# abc.remove(list_element)
+
+#  3.clear()
+abc=[100,200,300,400,500]
+abc.clear()
+print(abc)
+# list_name.clear():- it will remove all list element
+
+# 4. del :- it will remove the list from memory
+
+# abc=[100,200,300,400,500]
+# del abc
+# print(abc)
+
+
+# predefined method in list
+# 1. len():- find the lenght of list
+# 2. reverse():- it will reverse the list
+# 3. sort() :- it will sort in ascending order, for descending sort(reverse=True)
+# 4. min() :- it will find the minimum value from list ( only applicable for integer)
+# 5. max() :- it will find the maximum value from list
+# 6. sum() :- it will find the sum of list element
+# 7. count() :- it will count the repeated list element
+
+# 2. reverse():-
+# abc=[11,2,4,5,6,7,3,112,99]
+# print(abc[::-1]) # slice se reverse
+# abc.reverse()
+# print(abc)
+
+# # 3. sort() :-
+# abc.sort()
+# print(abc) # Ascending order
+
+# abc.sort(reverse=True)
+# print(abc) # Descending order
+
+# 6. sum() :-
+# print(sum(abc))
+
+# print(max(abc))
+
+# print(min(abc))
+
+# print(abc.count(2))
+
+
+#  # wap to find the min & max value from a given list 
+ 
+# list=[1,2,60,3,50,60]
+
+# # print(min(list))
+# # print(max(list))
+
+# m=[10,2,3,4,8,5,218,300,5,500]
+# max_value=m[0]
+# min_value=m[0]
+
+# for v in m:
+#     if v>max_value:
+#         max_value=v
+#     elif v<min_value:
+#         min_value=v
+
+
+# print("Maximum value=",max_value)
+# print("minimum value=",min_value)
+        
+
+# Nested list :- List inside list is known as Nested list
+
+# m=[[1,2,3,4],10,50,[100,1,12,34],58]
+
+# v=m[3][0]
+# print(v)
+# print(m[3][0])
+
+# Create the dynamic nested List
+
+# m=[]
+# r=int(input("Enter the row "))
+# c=int(input("Enter the column "))
+
+# for i in range(r):
+#     a=[]
+#     for j in range(c):
+#         element=int(input("Enter the list Element "))
+#         a.append(element)
+#     m.append(a)
+# print(m)
+        
+m=[[1,2,30,4],10,50,[100,1,12,34],158]
+mx_value=0
+for i in m:
+        if type(i)==type([]):
+            for j in i:
+                if j>mx_value:
+                    mx_value=j
+        else:
+            if i>mx_value:
+                mx_value=i
+                
+print("Maximum value= ",mx_value)
+            
